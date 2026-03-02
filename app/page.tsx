@@ -4,6 +4,7 @@ import PersonalInfo from "@/components/personal-info";
 import SectionLabel from "@/components/section-label";
 import SlantSection from "@/components/slant-section";
 import GridInfo from "@/components/grid-info";
+import SocialGrid from "@/components/social-grid";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <PersonalInfo />
       <SlantSection />
       <GridInfo />
+      <SocialGrid />
     </div>
   );
 }
