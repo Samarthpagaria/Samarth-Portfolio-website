@@ -5,6 +5,7 @@ import SectionLabel from "@/components/section-label";
 import SlantSection from "@/components/slant-section";
 import GridInfo from "@/components/grid-info";
 import SocialGrid from "@/components/social-grid";
+import AboutSection from "@/components/about-section";
 
 export default function Home() {
   return (
@@ -16,6 +17,8 @@ export default function Home() {
       <SlantSection />
       <GridInfo />
       <SocialGrid />
+      <SectionLabel label="About" index="02" />
+      <AboutSection />
     </div>
   );
 }

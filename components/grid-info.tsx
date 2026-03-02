@@ -40,7 +40,7 @@ export default function GridInfo() {
     {
       icon: GraduationCap,
       label: "Education",
-      value: "B.Tech @ Vidyalankar Institute of Technology",
+      value: "B.Tech @Vidyalankar Institute of Technology",
     },
     {
       icon: MapPin,
@@ -98,7 +98,7 @@ export default function GridInfo() {
             <div className="absolute inset-[-2px] border border-neutral-100/50 rounded-md group-hover:scale-105 transition-transform duration-500" />
             
             {/* Main box */}
-            <div className="relative w-7 h-7 bg-white border border-[#ededf0] flex items-center justify-center rounded-md shadow-[1.5px_1.5px_0px_#f4f4f5] group-hover:shadow-[0.5px_0.5px_0px_#f4f4f5] group-hover:translate-x-[1px] group-hover:translate-y-[1px] transition-all duration-300">
+            <div className="relative w-7 h-7 bg-white border border-[#ededf0] flex items-center justify-center rounded-md shadow-[1.5px_1.5px_0px_#f4f4f5] group-hover:shadow-[0.5px_0.5px_0px_#f4f4f5] group-hover:translate-x-px group-hover:translate-y-px transition-all duration-300">
               <item.icon size={12} className="text-zinc-900 stroke-[1.5px]" />
             </div>
           </div>

@@ -31,12 +31,7 @@ const socialItems = [
     url: "https://linkedin.com",
     color: "bg-[#0077b5]",
   },
-  {
-    name: "daily.dev",
-    icon: Globe,
-    url: "https://daily.dev",
-    color: "bg-gradient-to-br from-purple-600 to-pink-600",
-  },
+
   {
     name: "Discord",
     icon: MessageSquare,

@@ -5,7 +5,7 @@ import { WordRotate } from "@/components/ui/word-rotate"
 export default function PersonalInfo() {
   return (
     <div className="flex items-center border-b border-[#ededf0] bg-background">
-      <div className=""><div className="shrink-0 relative border-r border-[#ededf0]">
+      <div className="p-1  border-r border-[#ededf0]"><div className="shrink-0 relative">
         {/* Geometric Decorative Border */}
        
         <div className="absolute inset-[-3px] rounded-full border border-neutral-300" />
@@ -25,7 +25,7 @@ export default function PersonalInfo() {
                 <div className="flex justify-end items-center w-full">
                   <span className="text-[10px] font-mono text-neutral-500 font-medium border border-[#ededf0] px-1.5 py-0.5 rounded-full bg-neutral-50">Age: 21</span>
                 </div>
-                <p className="font-mono text-neutral-300 font-medium ">Chasing sunsets and big ideas</p>
+                <p className="font-mono text-neutral-300 font-medium text-sm ">Chasing sunsets and big ideas</p>
               </div>
               <div className="pl-2 flex-1 border-b border-[#ededf0] flex items-center"> <p className="font-sans text-zinc-900 text-3xl font-extrabold">Samarth Pagaira</p> </div>
               <div className="pl-2 flex-1"> <WordRotate words={["Full Stack Engineer", "Creating with code. Small details matter.","Solving complex problems with elegant code","Optimizing for performance and user experience."]} className="text-neutral-500 font-light text-sm font-mono" duration={3000} /> </div>
