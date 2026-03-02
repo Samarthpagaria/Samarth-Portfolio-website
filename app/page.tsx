@@ -2,6 +2,8 @@ import Navbar from "@/components/navbar";
 import HeroSparkles from "@/components/hero-sparkles";
 import PersonalInfo from "@/components/personal-info";
 import SectionLabel from "@/components/section-label";
+import SlantSection from "@/components/slant-section";
+import GridInfo from "@/components/grid-info";
 
 export default function Home() {
   return (
@@ -10,6 +12,8 @@ export default function Home() {
       <HeroSparkles />
       <SectionLabel label="Personal Details" index="01" />
       <PersonalInfo />
+      <SlantSection />
+      <GridInfo />
     </div>
   );
 }
