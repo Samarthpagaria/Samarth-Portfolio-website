@@ -7,6 +7,8 @@ import GridInfo from "@/components/grid-info";
 import SocialGrid from "@/components/social-grid";
 import AboutSection from "@/components/about-section";
 import GitHubActivity from "@/components/github-contributions";
+// import LeetCodeStats from "@/components/leetcode-stats";
+import Stack from "@/components/stack";
 
 export default function Home() {
   return (
@@ -22,6 +24,11 @@ export default function Home() {
       <AboutSection />
       <SectionLabel label="GitHub Activity" index="03" />
       <GitHubActivity />
+      <SectionLabel label="Leetcode Submissions" index="04" />
+      {/* <LeetCodeStats /> */}
+      <SlantSection />
+      <SectionLabel label="Stacks" index="05" />
+      <Stack />
     </div>
   );
 }
