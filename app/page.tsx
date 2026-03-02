@@ -6,10 +6,11 @@ import SlantSection from "@/components/slant-section";
 import GridInfo from "@/components/grid-info";
 import SocialGrid from "@/components/social-grid";
 import AboutSection from "@/components/about-section";
+import GitHubActivity from "@/components/github-contributions";
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen pb-20">
       <Navbar />
       <HeroSparkles />
       <SectionLabel label="Personal Details" index="01" />
@@ -19,6 +20,8 @@ export default function Home() {
       <SocialGrid />
       <SectionLabel label="About" index="02" />
       <AboutSection />
+      <SectionLabel label="GitHub Activity" index="03" />
+      <GitHubActivity />
     </div>
   );
 }
