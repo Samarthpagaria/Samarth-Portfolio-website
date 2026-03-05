@@ -9,6 +9,10 @@ import AboutSection from "@/components/about-section";
 import GitHubActivity from "@/components/github-contributions";
 // import LeetCodeStats from "@/components/leetcode-stats";
 import Stack from "@/components/stack";
+import Experience from "@/components/experience";
+import Education from "@/components/education";
+import Projects from "@/components/projects";
+import Footer from "@/components/footer";
 
 export default function Home() {
   return (
@@ -24,11 +28,21 @@ export default function Home() {
       <AboutSection />
       <SectionLabel label="GitHub Activity" index="03" />
       <GitHubActivity />
-      <SectionLabel label="Leetcode Submissions" index="04" />
-      {/* <LeetCodeStats /> */}
+      {/* <SectionLabel label="Leetcode Submissions" index="04" />
+      <LeetCodeStats /> */}
       <SlantSection />
-      <SectionLabel label="Stacks" index="05" />
+      <SectionLabel label="Stacks" index="04" />
       <Stack />
+      <SlantSection />
+      <SectionLabel label="Experience" index="05" />
+      <Experience />
+      <SlantSection />
+      <SectionLabel label="Education" index="06" />
+      <Education />
+      <SlantSection />
+      <SectionLabel label="Projects (02)" index="07" />
+      <Projects />
+      <Footer />
     </div>
   );
 }
