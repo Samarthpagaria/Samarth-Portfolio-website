@@ -18,7 +18,7 @@ export default function Stack() {
             
             {/* Icon Container */}
             <div 
-              className="w-5 h-5 md:w-6 md:h-6 transition-all duration-500 relative z-10 opacity-35 group-hover:opacity-100 group-hover:scale-110 flex items-center justify-center"
+              className="w-5 h-5 md:w-6 md:h-6 transition-all duration-500 relative z-10 opacity-100 group-hover:scale-110 flex items-center justify-center"
               style={{ color: tech.color }}
             >
               {typeof tech.icon === 'string' ? (
