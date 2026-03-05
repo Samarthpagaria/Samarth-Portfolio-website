@@ -48,14 +48,14 @@ const socialItems = [
 
 export default function SocialGrid() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-1 p-1 border-b border-dotted border-neutral-200 bg-[#fcfcfd]">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-1 p-1 border-b border-dotted border-border bg-background transition-colors duration-300">
       {socialItems.map((social, index) => (
         <a
           key={index}
           href={social.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="p-3 px-4 flex items-center justify-between bg-white border border-neutral-200 border-dotted group hover:bg-[#fafafb] transition-all duration-300 rounded-xs"
+          className="p-3 px-4 flex items-center justify-between bg-card border border-border border-dotted group hover:bg-muted/30 transition-all duration-300 rounded-sm"
         >
           <div className="flex items-center gap-3">
             {/* Social Icon/Image with background */}
@@ -66,7 +66,7 @@ export default function SocialGrid() {
                     src={social.image} 
                     alt={`${social.name} logo`}
                     fill
-                    className="object-cover"
+                    className={`object-cover ${social.name === 'X' ? 'dark:invert' : ''}`}
                   />
                 </div>
               ) : social.icon ? (
@@ -75,7 +75,7 @@ export default function SocialGrid() {
             </div>
             
             {/* Social Name */}
-            <span className="font-mono font-semibold text-[13px] text-zinc-900 tracking-tight">
+            <span className="font-mono font-semibold text-[13px] text-foreground tracking-tight">
               {social.name}
             </span>
           </div>
@@ -83,7 +83,7 @@ export default function SocialGrid() {
           {/* External Link Arrow */}
           <ArrowUpRight 
             size={14} 
-            className="text-zinc-300 group-hover:text-zinc-900 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" 
+            className="text-muted-foreground group-hover:text-foreground group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" 
           />
         </a>
       ))}

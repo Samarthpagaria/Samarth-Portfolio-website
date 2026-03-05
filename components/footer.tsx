@@ -4,16 +4,14 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <footer className="w-full py-12 px-6 sm:px-12 border-t border-neutral-100 bg-white">
-      <div className="flex flex-col items-center justify-center gap-4 text-center">
-        <p className="text-[12px] font-mono text-neutral-400">
-          © {new Date().getFullYear()} • Built with Next.js, React & Tailwind CSS
+    <footer className="w-full py-6 px-6 sm:px-12 border-t border-border bg-background transition-colors duration-300">
+      <div className="flex flex-col items-center justify-center gap-1.5 text-center">
+        <p className="text-[11px] font-mono text-muted-foreground">
+          © {new Date().getFullYear()} Samarth Pagaria • All Rights Reserved
         </p>
-        <div className="flex items-center gap-4 text-[11px] font-mono text-neutral-300">
-          <span>Optimized for Performance</span>
-          <span className="w-1 h-1 rounded-full bg-neutral-200" />
-          <span>Designed for Precision</span>
-        </div>
+        <p className="text-[10px] font-mono text-muted-foreground/40">
+           Built with Next.js & Tailwind CSS
+        </p>
       </div>
     </footer>
   );

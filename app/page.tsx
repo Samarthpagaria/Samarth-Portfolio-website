@@ -19,29 +19,53 @@ export default function Home() {
     <div className="flex flex-col min-h-screen pb-20">
       <Navbar />
       <HeroSparkles />
-      <SectionLabel label="Personal Details" index="01" />
-      <PersonalInfo />
+      
+      <div id="personal-details">
+        <SectionLabel label="Personal Details" index="01" />
+        <PersonalInfo />
+        <SlantSection />
+        <GridInfo />
+        <SocialGrid />
+      </div>
+
+      <div id="about">
+        <SectionLabel label="About" index="02" />
+        <AboutSection />
+      </div>
+
+      <div id="github">
+        <SectionLabel label="GitHub Activity" index="03" />
+        <GitHubActivity />
+      </div>
+
       <SlantSection />
-      <GridInfo />
-      <SocialGrid />
-      <SectionLabel label="About" index="02" />
-      <AboutSection />
-      <SectionLabel label="GitHub Activity" index="03" />
-      <GitHubActivity />
-      {/* <SectionLabel label="Leetcode Submissions" index="04" />
-      <LeetCodeStats /> */}
+      
+      <div id="stacks">
+        <SectionLabel label="Stacks" index="04" />
+        <Stack />
+      </div>
+
       <SlantSection />
-      <SectionLabel label="Stacks" index="04" />
-      <Stack />
+
+      <div id="experience">
+        <SectionLabel label="Experience" index="05" />
+        <Experience />
+      </div>
+
       <SlantSection />
-      <SectionLabel label="Experience" index="05" />
-      <Experience />
+
+      <div id="education">
+        <SectionLabel label="Education" index="06" />
+        <Education />
+      </div>
+
       <SlantSection />
-      <SectionLabel label="Education" index="06" />
-      <Education />
-      <SlantSection />
-      <SectionLabel label="Projects (02)" index="07" />
-      <Projects />
+
+      <div id="projects">
+        <SectionLabel label="Projects (02)" index="07" />
+        <Projects />
+      </div>
+
       <Footer />
     </div>
   );

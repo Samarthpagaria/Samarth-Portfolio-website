@@ -58,7 +58,7 @@ export default function HeroSparkles() {
     <div 
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="min-h-[200px] h-[27vh] relative w-full flex flex-col items-center justify-center overflow-hidden bg-background border-b border-[#ededf0] transition-colors duration-500 cursor-default"
+      className="min-h-[200px] h-[27vh] relative w-full flex flex-col items-center justify-center overflow-hidden bg-background border-b border-border transition-colors duration-500 cursor-default"
     >
       <div className="w-full absolute inset-0 h-full pointer-events-none">
         <SparklesCore
@@ -86,7 +86,7 @@ export default function HeroSparkles() {
           alt="Samarth Logo" 
           width={180} 
           height={180} 
-          className="drop-shadow-2xl brightness-100 dark:invert-0"
+          className="drop-shadow-2xl brightness-100 dark:invert transition-all duration-300"
         />
       </motion.div>
     </div>

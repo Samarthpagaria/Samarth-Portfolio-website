@@ -8,7 +8,7 @@ const projects = [
     title: "Strivo",
     period: "12.2025 – ∞",
     icon: "/strivo.png",
-    link: "https://github.com",
+    link: "https://github.com/Samarthpagaria/Strivo",
     active: true,
     description: [
       "Developing Strivo, a full-stack social media platform that integrates long-form video uploads and tweet-style posts within a unified system.",
@@ -27,7 +27,7 @@ const projects = [
     title: "ClinicPro",
     period: "04.2025 – 06.2025",
     icon: "/clinicpro.png",
-    link: "https://clinicpro.com",
+    link: "https://github.com/ocmono/ClinicPro",
     active: false,
     description: [
       "Contributed to the development of ClinicPro, a full-stack web application for medical practice management.",
@@ -49,42 +49,42 @@ function ProjectItem({ project }: { project: typeof projects[0] }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="group flex flex-col border-b border-neutral-100 last:border-0 hover:bg-neutral-50/50 transition-all duration-300">
+    <div className="group flex flex-col border-b border-border last:border-0 hover:bg-muted/30 transition-all duration-300">
       <div className="flex items-stretch">
         {/* Icon Section */}
         <div className="w-[72px] flex items-center justify-center shrink-0 py-4">
-          <div className="w-10 h-10 rounded-full overflow-hidden bg-white border border-neutral-100 flex items-center justify-center shadow-sm">
-              <Code2 className="w-5 h-5 text-neutral-400" />
+          <div className="w-10 h-10 rounded-full overflow-hidden bg-card border border-border flex items-center justify-center shadow-sm">
+              <Code2 className="w-5 h-5 text-muted-foreground" />
           </div>
         </div>
 
         {/* Dotted Vertical Separator */}
-        <div className="w-px border-l border-dotted border-neutral-200" />
+        <div className="w-px border-l border-dotted border-border" />
 
         {/* Content Section */}
         <div className="flex-1 flex items-center justify-between pl-6 pr-6 py-4">
           <div className="flex flex-col">
-            <h3 className="text-[15px] font-semibold text-neutral-900 font-sans tracking-tight">
+            <h3 className="text-[15px] font-semibold text-foreground font-sans tracking-tight">
               {project.title}
             </h3>
-            <p className="text-[12px] text-neutral-400 font-mono mt-0.5">
+            <p className="text-[12px] text-muted-foreground font-mono mt-0.5">
               {project.period}
             </p>
           </div>
 
           {/* Action Icons */}
-          <div className="flex items-center gap-5 text-neutral-300">
+          <div className="flex items-center gap-5 text-muted-foreground/50">
             <a 
               href={project.link} 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="hover:text-neutral-900 transition-colors"
+              className="hover:text-foreground transition-colors"
             >
               <Link className="w-[18px] h-[18px] cursor-pointer" />
             </a>
             <button 
               onClick={() => setIsOpen(!isOpen)}
-              className={`hover:text-neutral-900 transition-all ${isOpen ? 'text-neutral-900' : ''}`}
+              className={`hover:text-foreground transition-all ${isOpen ? 'text-foreground' : ''}`}
             >
               <ChevronsUpDown className="w-[18px] h-[18px] cursor-pointer" />
             </button>
@@ -99,10 +99,10 @@ function ProjectItem({ project }: { project: typeof projects[0] }) {
         <div className="overflow-hidden">
           <div className="pl-[97px] pr-6 pb-6 flex flex-col gap-4">
             {project.description.length > 0 && (
-              <ul className="space-y-2 font-mono text-[12px] text-neutral-600 list-none">
+              <ul className="space-y-2 font-mono text-[12px] text-muted-foreground/80 list-none">
                 {project.description.map((bullet, i) => (
                   <li key={i} className="flex gap-2">
-                    <span className="text-neutral-300">•</span>
+                    <span className="text-muted-foreground/30">•</span>
                     <span>{bullet}</span>
                   </li>
                 ))}
@@ -114,7 +114,7 @@ function ProjectItem({ project }: { project: typeof projects[0] }) {
               {project.tags.map((tag) => (
                 <span 
                   key={tag} 
-                  className="px-2 py-0.5 text-[10.5px] font-medium text-[#737373] bg-[#f5f5f5]/50 border border-[#e5e5e5] rounded-[4px] hover:bg-[#f5f5f5] transition-colors font-mono"
+                  className="px-2 py-0.5 text-[10.5px] font-medium text-muted-foreground bg-muted/30 border border-border rounded-[4px] hover:bg-muted/50 transition-colors font-mono"
                 >
                   {tag}
                 </span>
@@ -129,7 +129,7 @@ function ProjectItem({ project }: { project: typeof projects[0] }) {
 
 export default function Projects() {
   return (
-    <section className="bg-white border-b border-neutral-200 w-full mb-2">
+    <section className="bg-background border-b border-border w-full mb-2 transition-colors duration-300">
       <div className="w-full">
         <div className="flex flex-col">
           {projects.map((project, index) => (

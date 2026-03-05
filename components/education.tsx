@@ -37,36 +37,36 @@ const education = [
 
 export default function Education() {
   return (
-    <section className="bg-white border-b border-neutral-200 w-full font-mono">
+    <section className="bg-background border-b border-border w-full font-mono transition-colors duration-300">
       <div className="w-full py-8 px-6 sm:px-12">
         <div className="space-y-8 relative">
           {/* Vertical line connecting education items */}
-          <div className="absolute left-[11px] top-6 bottom-6 w-px bg-neutral-100 hidden sm:block" />
+          <div className="absolute left-[11px] top-6 bottom-6 w-px bg-border hidden sm:block" />
           
           {education.map((edu, index) => (
             <div key={index} className="relative flex gap-4 group">
               {/* Icon */}
-              <div className="relative z-10 hidden sm:flex w-6 h-6 rounded-full bg-white border border-neutral-200 shadow-sm items-center justify-center shrink-0 mt-1">
-                <GraduationCap className="w-3 h-3 text-neutral-400" />
+              <div className="relative z-10 hidden sm:flex w-6 h-6 rounded-full bg-card border border-border shadow-sm items-center justify-center shrink-0 mt-1 transition-colors">
+                <GraduationCap className="w-3 h-3 text-muted-foreground" />
               </div>
               
               <div className="flex-1 min-w-0">
                 <div className="flex items-baseline gap-2 mb-0.5">
-                  <h3 className="text-[15px] font-semibold text-neutral-900 font-sans leading-none">
+                  <h3 className="text-[15px] font-semibold text-foreground font-sans leading-none">
                     {edu.school}
                   </h3>
-                  <span className="text-[12px] font-medium text-neutral-500 font-sans">
+                  <span className="text-[12px] font-medium text-muted-foreground/80 font-sans">
                     ({edu.info})
                   </span>
                 </div>
                 
-                <div className="text-[12px] text-neutral-400 mb-3 font-sans">{edu.period}</div>
+                <div className="text-[12px] text-muted-foreground mb-3 font-sans">{edu.period}</div>
                 
                 <div className="flex flex-wrap gap-1.5">
                   {edu.tags.map((tag) => (
                     <span 
                       key={tag} 
-                      className="px-2 py-0.5 text-[10.5px] font-medium text-[#737373] bg-[#f5f5f5]/50 border border-[#e5e5e5] rounded-[4px] whitespace-nowrap"
+                      className="px-2 py-0.5 text-[10.5px] font-medium text-muted-foreground bg-muted/30 border border-border rounded-[4px] whitespace-nowrap hover:bg-muted/50 transition-colors"
                     >
                       {tag}
                     </span>
