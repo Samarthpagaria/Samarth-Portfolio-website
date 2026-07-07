@@ -8,7 +8,7 @@ import SearchBar from "./search-bar";
 import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
 import { Music2 } from "lucide-react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faGithub,faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Navbar() {
@@ -62,13 +62,18 @@ export default function Navbar() {
 
         <div className="flex items-center gap-4 border-l border-border pl-4">
           <a
-            href="https://github.com"
+            href="https://github.com/Samarthpagaria"
             target="_blank"
             rel="noopener noreferrer"
             className="w-8 h-8 flex items-center justify-center group text-muted-foreground hover:text-foreground"
           >
             <FontAwesomeIcon icon={faGithub} className="w-5 h-5 group-hover:scale-110 transition-all" />
+            
           </a>
+          <a href="https://x.com/SamarthPagaria"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-8 h-8 flex items-center justify-center group text-muted-foreground hover:text-foreground"><FontAwesomeIcon icon={faXTwitter} className="w-5 h-5 group-hover:scale-110 transition-all" /></a>
           <AnimatedThemeToggler className="w-8 h-8 text-muted-foreground hover:text-foreground transition-colors" duration={500} />
           <button className="w-5 h-5 flex items-center justify-center transition-all group text-muted-foreground hover:text-foreground">
             <Music2 className="w-5 h-5 group-hover:scale-110 transition-all" />

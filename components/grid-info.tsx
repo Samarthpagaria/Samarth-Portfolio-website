@@ -35,7 +35,7 @@ export default function GridInfo() {
     {
       icon: Briefcase,
       label: "Role",
-      value: "Full-Stack Engineer",
+      value: "Full-Stack & AI Engineer",
     },
     {
       icon: GraduationCap,
@@ -45,7 +45,7 @@ export default function GridInfo() {
     {
       icon: MapPin,
       label: "Location",
-      value: "Mumbai, Maharashtra",
+      value: "Mumbai, Maharashtra India 🇮🇳",
     },
     {
       icon: Clock,
@@ -56,11 +56,6 @@ export default function GridInfo() {
       icon: MapPin,
       label: "Location",
       value: "Mumbai, India 🇮🇳",
-    },
-    {
-      icon: Phone,
-      label: "Contact",
-      value: "+91 8591881708",
     },
     {
       icon: Mail,

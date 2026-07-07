@@ -20,9 +20,9 @@ const DEFAULT_VALUES = [
   { title: "Projects & Work", category: "Section", id: "projects" },
   { title: "Strivo (Social Platform)", category: "Project", url: "https://github.com/Samarthpagaria/Strivo" },
   { title: "ClinicPro (Medical Management)", category: "Project", url: "https://github.com/ocmono/ClinicPro" },
-  { title: "LinkedIn", category: "Social", url: "https://linkedin.com" },
-  { title: "Twitter / X", category: "Social", url: "https://twitter.com" },
-  { title: "GitHub Profile", category: "Social", url: "https://github.com" },
+  { title: "LinkedIn", category: "Social", url: "https://linkedin.com/in/samarthpagaria" },
+  { title: "Twitter / X", category: "Social", url: "https://x.com/SamarthPagaria" },
+  { title: "GitHub Profile", category: "Social", url: "https://github.com/Samarthpagaria" },
 ];
 
 export default function SearchModal({ isOpen, onClose }: SearchModalProps) {

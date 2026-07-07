@@ -6,6 +6,8 @@ import { useState, useEffect } from "react";
 export default function GitHubActivity() {
   const githubUsername = "samarthpagaria";
   const [themeMode, setThemeMode] = useState<"light" | "dark">("light");
+  const [totalContributions, setTotalContributions] = useState<number | null>(null);
+  const currentYear = new Date().getFullYear();
 
   useEffect(() => {
     const updateTheme = () => {
@@ -16,6 +18,16 @@ export default function GitHubActivity() {
     observer.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
     return () => observer.disconnect();
   }, []);
+
+  useEffect(() => {
+    fetch(`https://github-contributions-api.jogruber.de/v4/${githubUsername}?y=${currentYear}`)
+      .then((res) => res.json())
+      .then((data) => {
+        const total = data?.total?.[currentYear];
+        if (typeof total === "number") setTotalContributions(total);
+      })
+      .catch(() => {/* silently fail */});
+  }, [githubUsername, currentYear]);
 
   const themeColors = {
     light: ['#ebedf0', '#9be9a8', '#40c463', '#30a14e', '#216e39'],
@@ -41,7 +53,16 @@ export default function GitHubActivity() {
 
           <div className="mt-4 flex items-center justify-between text-[13px] text-muted-foreground">
             <div>
-              <span>3,621 contributions in 2025 on </span>
+              {totalContributions !== null ? (
+                <span>
+                  <span className="text-foreground font-semibold">{totalContributions.toLocaleString()}</span>
+                  {" contributions in "}
+                  <span className="text-foreground font-semibold">{currentYear}</span>
+                  {" on "}
+                </span>
+              ) : (
+                <span>Contributions in {currentYear} on </span>
+              )}
               <a 
                 href={`https://github.com/${githubUsername}`} 
                 target="_blank" 

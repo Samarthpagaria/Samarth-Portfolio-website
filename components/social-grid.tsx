@@ -16,33 +16,20 @@ const socialItems = [
   {
     name: "X",
     image: "/x.png",
-    url: "https://x.com",
+    url: "https://x.com/SamarthPagaria",
     color: "bg-white",
   },
   {
     name: "GitHub",
     icon: Github,
-    url: "https://github.com",
+    url: "https://github.com/Samarthpagaria",
     color: "bg-zinc-900",
   },
   {
     name: "LinkedIn",
     icon: Linkedin,
-    url: "https://linkedin.com",
+    url: "https://www.linkedin.com/in/samarth-pagaria-81a93b281/",
     color: "bg-[#0077b5]",
-  },
-
-  {
-    name: "Discord",
-    icon: MessageSquare,
-    url: "https://discord.com",
-    color: "bg-[#5865F2]",
-  },
-  {
-    name: "Peerlist",
-    image: "/peerlist.png",
-    url: "https://peerlist.io/samarthpagaria",
-    color: "bg-[#00AA45]", // Peerlist Green
   },
 ];
 

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import profilePic from "@/public/image.png";
-import { WordRotate } from "@/components/ui/word-rotate"
+import { WordRotate } from "@/components/ui/word-rotate";
+import { Download } from "lucide-react";
 
 export default function PersonalInfo() {
   return (
@@ -26,8 +27,16 @@ export default function PersonalInfo() {
                 </div>
                 <p className="font-mono text-muted-foreground/60 font-medium text-sm">Chasing sunsets and big ideas</p>
               </div>
-              <div className="pl-2 flex-1 border-b border-border flex items-center transition-colors">
+              <div className="pl-2 pr-2 flex-1 border-b border-border flex items-center justify-between transition-colors">
                 <p className="font-sans text-foreground text-3xl font-extrabold">Samarth Pagaria</p>
+                <a
+                  href="/resume.pdf"
+                  download
+                  className="flex items-center gap-1.5 text-[10px] font-mono text-foreground font-semibold border border-foreground/40 px-2.5 py-1 rounded-full hover:bg-foreground hover:text-background transition-all duration-200 group shrink-0"
+                >
+                  <Download size={10} className="group-hover:translate-y-0.5 transition-transform duration-200" />
+                  Resume
+                </a>
               </div>
               <div className="pl-2 flex-1 flex items-center">
                 <WordRotate 
