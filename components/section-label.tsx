@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "motion/react";
 import NextLink from "next/link";
+import { GeistPixelSquare } from "geist/font/pixel";
 
 export default function SectionLabel({
   label,
@@ -37,20 +38,12 @@ export default function SectionLabel({
       />
       
       <div className="flex items-center gap-3 relative z-20">
-        {index && (
-          <span className="text-[10px] font-mono text-muted-foreground font-bold tracking-tighter">
-            [{index}]
-          </span>
-        )}
+        {/* Index removed as per the reference image */}
         <div className="relative inline-flex">
           <motion.span 
-            animate={{ backgroundPosition: ["100% 0", "-100% 0"] }}
+            animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
             transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-            className="text-[11px] font-mono uppercase tracking-[0.2em] font-medium bg-clip-text text-transparent bg-size-[200%_auto] inline-block"
-            style={{
-              backgroundImage: "linear-gradient(90deg, var(--foreground) 0%, var(--foreground) 40%, var(--background) 50%, var(--foreground) 60%, var(--foreground) 100%)",
-              WebkitBackgroundClip: "text",
-            }}
+            className={`${GeistPixelSquare.className} text-2xl tracking-wide bg-gradient-to-r from-zinc-500 via-zinc-200 to-zinc-500 bg-clip-text text-transparent bg-[length:200%_auto] inline-block drop-shadow-sm`}
           >
             {label}
           </motion.span>

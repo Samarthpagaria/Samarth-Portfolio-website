@@ -9,12 +9,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Samarth Portfolio",
+  title: "Full-Stack & AI Engineer | Samarth Pagaria",
   description: "A professional portfolio showcasing Samarth's work and projects.",
   icons: {
-    icon: "/new_logo.png",
-    apple: "/new_logo.png",
-  },
+    icon: "/tabLogo_circle.png",
+    apple: "/tabLogo_circle.png",
+  }
 };
 
 export default function RootLayout({

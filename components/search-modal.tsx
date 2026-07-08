@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import { Search, X } from "lucide-react";
 import Image from "next/image";
 import logo from "@/public/new_logo.png";
@@ -73,8 +74,8 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
     item.category.toLowerCase().includes(query.toLowerCase())
   );
 
-  return (
-    <div className="fixed inset-0 z-50 flex items-start justify-center px-4 pt-[15vh] bg-black/40 dark:bg-black/70 animate-in fade-in duration-300">
+  const modalContent = (
+    <div className="fixed inset-0 z-[100] flex items-start justify-center px-4 pt-[15vh] bg-background/80 backdrop-blur-sm animate-in fade-in duration-300">
       <div 
         ref={modalRef}
         className="w-full max-w-lg bg-background border border-border rounded-2xl shadow-2xl overflow-hidden animate-in slide-in-from-top-4 duration-300 flex flex-col h-[400px]"
@@ -147,4 +148,8 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
       />
     </div>
   );
+
+  // Use createPortal to render the modal directly in document.body
+  // so it breaks out of any parent CSS containment (like filters or transforms)
+  return typeof document !== "undefined" ? createPortal(modalContent, document.body) : null;
 }

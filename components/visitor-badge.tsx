@@ -49,10 +49,10 @@ export default function VisitorBadge() {
 
   return (
     <div className="flex items-center px-3 py-1.5 rounded-md border w-fit bg-white dark:bg-[#1a1a1a] border-neutral-400 dark:border-white/10">
-      <span className="font-mono font-bold   text-neutral-400 dark:text-white">
+      <span className="font-mono font-bold text-sm  text-neutral-400 dark:text-white">
         You&apos;re the <span className="text-black dark:text-white">{views.toLocaleString()}</span>
         <sup className=" font-bold text-neutral-600 dark:text-white">{ordinal}</sup> visitor
       </span>
     </div>
   );
-}
+} 
