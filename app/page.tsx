@@ -64,8 +64,8 @@ export default function Home() {
       <SlantSection />
 
       <div id="projects">
-        <SectionLabel label="Projects (09)" index="07" actionLabel="See All" actionHref="/projects" />
-        <Projects />
+        <SectionLabel label="Projects (09)" index="07" />
+        <Projects limit={2} />
       </div>
 
       {/* <SlantSection />

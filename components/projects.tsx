@@ -302,15 +302,27 @@ function ProjectItem({ project }: { project: typeof projects[0] }) {
   );
 }
 
-export default function Projects() {
+export default function Projects({ limit }: { limit?: number }) {
+  const displayProjects = limit ? projects.slice(0, limit) : projects;
+  
   return (
     <section className="bg-background border-b border-border w-full mb-2 transition-colors duration-300">
       <div className="w-full">
         <div className="flex flex-col">
-          {projects.map((project, index) => (
+          {displayProjects.map((project, index) => (
             <ProjectItem key={index} project={project} />
           ))}
         </div>
+        {limit && limit < projects.length && (
+          <div className="flex justify-center p-6 border-b border-border">
+            <a
+              href="/projects"
+              className="bg-black hover:bg-black/80 dark:bg-white dark:hover:bg-white/90 text-white dark:text-black text-sm font-medium px-6 py-2.5 rounded-full transition-colors flex items-center gap-2"
+            >
+              Show all projects
+            </a>
+          </div>
+        )}
       </div>
     </section>
   );
