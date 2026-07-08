@@ -9,9 +9,7 @@ export default function Footer() {
         <p className="text-[11px] font-mono text-muted-foreground">
           © {new Date().getFullYear()} Samarth Pagaria • All Rights Reserved
         </p>
-        <p className="text-[10px] font-mono text-muted-foreground/40">
-           Built with Next.js & Tailwind CSS
-        </p>
+
       </div>
     </footer>
   );

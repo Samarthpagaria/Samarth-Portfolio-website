@@ -12,6 +12,7 @@ import Stack from "@/components/stack";
 import Experience from "@/components/experience";
 import Education from "@/components/education";
 import Projects from "@/components/projects";
+// import Blogs from "@/components/blogs";
 import Footer from "@/components/footer";
 
 export default function Home() {
@@ -62,11 +63,19 @@ export default function Home() {
       <SlantSection />
 
       <div id="projects">
-        <SectionLabel label="Projects (02)" index="07" />
+        <SectionLabel label="Projects (03)" index="07" actionLabel="See All" actionHref="https://github.com/Samarthpagaria" />
         <Projects />
       </div>
 
+      {/* <SlantSection />
+
+      <div id="blogs">
+        <SectionLabel label="Blogs" index="08" />
+        <Blogs />
+      </div> */}
+
       <Footer />
+      
     </div>
   );
 }

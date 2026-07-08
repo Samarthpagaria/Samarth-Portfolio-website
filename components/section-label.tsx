@@ -1,7 +1,17 @@
 "use client";
 import { motion } from "motion/react";
 
-export default function SectionLabel({ label, index }: { label: string; index?: string }) {
+export default function SectionLabel({
+  label,
+  index,
+  actionLabel,
+  actionHref,
+}: {
+  label: string;
+  index?: string;
+  actionLabel?: string;
+  actionHref?: string;
+}) {
   return (
     <div className="border-b border-border bg-background flex items-center h-8 px-4 relative overflow-hidden group tracking-wider transition-colors duration-300">
       {/* Decorative vertical line */}
@@ -44,10 +54,23 @@ export default function SectionLabel({ label, index }: { label: string; index?: 
         </div>
       </div>
 
-      <div className="ml-auto flex items-center gap-1 relative z-20">
-        <div className="w-1 h-1 rounded-full bg-border" />
-        <div className="w-1 h-1 rounded-full bg-border" />
-        <div className="w-1 h-1 rounded-full bg-border" />
+      <div className="ml-auto flex items-center relative z-20">
+        {actionLabel && actionHref ? (
+          <a
+            href={actionHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[10px] font-mono text-muted-foreground/50 hover:text-foreground transition-colors tracking-widest uppercase border border-border/50 hover:border-border rounded-[3px] px-2 py-0.5 hover:bg-muted/30"
+          >
+            {actionLabel}
+          </a>
+        ) : (
+          <>
+            <div className="w-1 h-1 rounded-full bg-border" />
+            <div className="w-1 h-1 rounded-full bg-border mx-1" />
+            <div className="w-1 h-1 rounded-full bg-border" />
+          </>
+        )}
       </div>
     </div>
   );

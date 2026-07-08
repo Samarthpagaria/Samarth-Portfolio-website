@@ -1,46 +1,65 @@
 "use client";
 
 import React, { useState } from "react";
-import { Link, ChevronsUpDown, ExternalLink, Code2 } from "lucide-react";
+import { ExternalLink, ChevronsUpDown, Code2 } from "lucide-react";
 
 const projects = [
   {
     title: "Strivo",
-    period: "12.2025 – ∞",
     icon: "/strivo.png",
-    link: "https://github.com/Samarthpagaria/Strivo",
+    link: "https://strivo-app.vercel.app/",
     active: true,
     description: [
-      "Developing Strivo, a full-stack social media platform that integrates long-form video uploads and tweet-style posts within a unified system.",
-      "Designing and implementing scalable backend APIs to manage users, posts, media uploads, and interactions.",
-      "Building a modern, responsive frontend using React with advanced state and data-fetching patterns.",
-      "Implementing efficient client-server data synchronization using TanStack Query for optimized performance and caching.",
-      "Structuring the project with modular architecture to support scalability and future feature expansion."
+      "Developing <strong class='text-foreground/90 font-semibold'>Strivo</strong>, a <strong class='text-foreground/90 font-semibold'>full-stack social media platform</strong> that integrates <strong class='text-foreground/90 font-semibold'>long-form video uploads</strong> and <strong class='text-foreground/90 font-semibold'>tweet-style posts</strong> within a unified system.",
+      "Designing and implementing <strong class='text-foreground/90 font-semibold'>scalable backend APIs</strong> to manage users, posts, media uploads, and interactions.",
+      "Building a <strong class='text-foreground/90 font-semibold'>modern, responsive frontend</strong> using <strong class='text-foreground/90 font-semibold'>React</strong> with advanced state and data-fetching patterns.",
+      "Implementing efficient <strong class='text-foreground/90 font-semibold'>client-server data synchronization</strong> using <strong class='text-foreground/90 font-semibold'>TanStack Query</strong> for optimized performance and caching.",
+      "Structuring the project with <strong class='text-foreground/90 font-semibold'>modular architecture</strong> to support scalability and future feature expansion."
     ],
     tags: [
-      "React.js", "TanStack Query", "Node.js", "Express.js", 
-      "Cloudinary", "MongoDB", "Git & GitHub", "Multer", 
+      "React.js", "TanStack Query", "Node.js", "Express.js",
+      "Cloudinary", "MongoDB", "Git & GitHub", "Multer",
       "REST APIs", "JavaScript", "Tailwind CSS"
     ]
   },
   {
-    title: "ClinicPro",
-    period: "04.2025 – 06.2025",
-    icon: "/clinicpro.png",
-    link: "https://github.com/ocmono/ClinicPro",
-    active: false,
+    title: "PrepVector",
+    icon: "/prepvector.png",
+    link: "https://prepvector.vercel.app/",
+    active: true,
     description: [
-      "Contributed to the development of ClinicPro, a full-stack web application for medical practice management.",
-      "Led frontend development, building responsive and user-friendly interfaces for healthcare workflows.",
-      "Implemented features for patient record management, prescription handling, and appointment scheduling.",
-      "Integrated an interactive calendar system for efficient appointment tracking and management.",
-      "Collaborated closely with backend developers to ensure smooth API integration and reliable data flow.",
-      "Focused on secure and scalable UI architecture suitable for handling sensitive healthcare data."
+      "Building <strong class='text-foreground/90 font-semibold'>PrepVector</strong>, a <strong class='text-foreground/90 font-semibold'>full-stack AI platform</strong> that unifies <strong class='text-foreground/90 font-semibold'>resume building</strong> with realistic, <strong class='text-foreground/90 font-semibold'>voice-driven mock interview simulation</strong>.",
+      "Designing <strong class='text-foreground/90 font-semibold'>AI pipelines</strong> using <strong class='text-foreground/90 font-semibold'>LangChain</strong> to generate <strong class='text-foreground/90 font-semibold'>tailored interview questions</strong> and evaluate spoken answers in real time.",
+      "Implementing a <strong class='text-foreground/90 font-semibold'>voice-driven interview simulator</strong> using native <strong class='text-foreground/90 font-semibold'>Web Speech APIs</strong> for <strong class='text-foreground/90 font-semibold'>text-to-speech</strong> and <strong class='text-foreground/90 font-semibold'>speech-to-text</strong> interaction.",
+      "Developing <strong class='text-foreground/90 font-semibold'>structured AI output parsing</strong> with <strong class='text-foreground/90 font-semibold'>Zod</strong> to reliably generate <strong class='text-foreground/90 font-semibold'>scorecards</strong>, <strong class='text-foreground/90 font-semibold'>skill-gap analyses</strong>, and <strong class='text-foreground/90 font-semibold'>multi-day preparation roadmaps</strong>.",
+      "Building an <strong class='text-foreground/90 font-semibold'>HTML-to-PDF resume generation pipeline</strong> using headless <strong class='text-foreground/90 font-semibold'>Puppeteer</strong> for pixel-perfect, <strong class='text-foreground/90 font-semibold'>ATS-friendly exports</strong>.",
+      "Architecting a <strong class='text-foreground/90 font-semibold'>cross-domain authentication system</strong> to ensure reliable <strong class='text-foreground/90 font-semibold'>session handling</strong> across separately hosted frontend and backend services.",
+      "Structuring the project with a <strong class='text-foreground/90 font-semibold'>scalable, modular backend</strong> and a <strong class='text-foreground/90 font-semibold'>feature-based frontend architecture</strong> for maintainability and growth."
     ],
     tags: [
-      "React.js", "JavaScript", "Tailwind CSS / CSS", 
-      "REST API Integration", "Node.js", "Express.js", 
-      "MongoDB", "Git & GitHub", "Postman"
+      "React.js", "TanStack Query", "Node.js", "Express.js",
+      "MongoDB", "LangChain", "Zustand", "Puppeteer",
+      "TypeScript", "Tailwind CSS", "JWT Authentication", "REST APIs"
+    ]
+  },
+  {
+    title: "FormForge",
+    icon: "/formforge.png",
+    link: "https://formforge-io.vercel.app/",
+    active: true,
+    description: [
+      "Building <strong class='text-foreground/90 font-semibold'>FormForge</strong>, a <strong class='text-foreground/90 font-semibold'>schema-driven form-building platform</strong> designed for full <strong class='text-foreground/90 font-semibold'>end-to-end type safety</strong> across the stack.",
+      "Designing a <strong class='text-foreground/90 font-semibold'>type-safe API layer</strong> using <strong class='text-foreground/90 font-semibold'>tRPC</strong> to eliminate <strong class='text-foreground/90 font-semibold'>contract drift</strong> between client and server.",
+      "Implementing <strong class='text-foreground/90 font-semibold'>dynamic form generation</strong> and validation using <strong class='text-foreground/90 font-semibold'>Zod schemas</strong>, enabling forms to be built and <strong class='text-foreground/90 font-semibold'>versioned like code</strong>.",
+      "Structuring the project as a <strong class='text-foreground/90 font-semibold'>Turborepo monorepo</strong> with modular, reusable packages for UI, database, and validation logic.",
+      "Integrating <strong class='text-foreground/90 font-semibold'>Drizzle ORM</strong> with <strong class='text-foreground/90 font-semibold'>Supabase</strong> for <strong class='text-foreground/90 font-semibold'>type-safe database schema management</strong> and authentication.",
+      "Building <strong class='text-foreground/90 font-semibold'>GitHub-integrated schema versioning</strong> to track and manage <strong class='text-foreground/90 font-semibold'>form schema history</strong> directly through repositories.",
+      "Developing a modern, responsive UI using <strong class='text-foreground/90 font-semibold'>shadcn/ui</strong> and <strong class='text-foreground/90 font-semibold'>Framer Motion</strong> for smooth, polished interactions."
+    ],
+    tags: [
+      "Next.js", "TypeScript", "tRPC", "Drizzle ORM",
+      "Supabase", "Zod", "Turborepo", "Tailwind CSS",
+      "shadcn/ui", "Framer Motion"
     ]
   }
 ];
@@ -54,7 +73,7 @@ function ProjectItem({ project }: { project: typeof projects[0] }) {
         {/* Icon Section */}
         <div className="w-[72px] flex items-center justify-center shrink-0 py-4">
           <div className="w-10 h-10 rounded-full overflow-hidden bg-card border border-border flex items-center justify-center shadow-sm">
-              <Code2 className="w-5 h-5 text-muted-foreground" />
+            <Code2 className="w-5 h-5 text-muted-foreground" />
           </div>
         </div>
 
@@ -67,24 +86,21 @@ function ProjectItem({ project }: { project: typeof projects[0] }) {
             <h3 className="text-[15px] font-semibold text-foreground font-sans tracking-tight">
               {project.title}
             </h3>
-            <p className="text-[12px] text-muted-foreground font-mono mt-0.5">
-              {project.period}
-            </p>
           </div>
 
           {/* Action Icons */}
           <div className="flex items-center gap-5 text-muted-foreground/50">
-            <a 
-              href={project.link} 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-foreground transition-colors"
             >
-              <Link className="w-[18px] h-[18px] cursor-pointer" />
+              <ExternalLink className="w-[18px] h-[18px] cursor-pointer" />
             </a>
-            <button 
+            <button
               onClick={() => setIsOpen(!isOpen)}
-              className={`hover:text-foreground transition-all ${isOpen ? 'text-foreground' : ''}`}
+              className={`hover:text-foreground transition-all ${isOpen ? "text-foreground" : ""}`}
             >
               <ChevronsUpDown className="w-[18px] h-[18px] cursor-pointer" />
             </button>
@@ -93,8 +109,8 @@ function ProjectItem({ project }: { project: typeof projects[0] }) {
       </div>
 
       {/* Collapsible Details */}
-      <div 
-        className={`grid transition-all duration-300 ease-in-out ${isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}
+      <div
+        className={`grid transition-all duration-300 ease-in-out ${isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}
       >
         <div className="overflow-hidden">
           <div className="pl-[97px] pr-6 pb-6 flex flex-col gap-4">
@@ -102,18 +118,18 @@ function ProjectItem({ project }: { project: typeof projects[0] }) {
               <ul className="space-y-2 font-mono text-[12px] text-muted-foreground/80 list-none">
                 {project.description.map((bullet, i) => (
                   <li key={i} className="flex gap-2">
-                    <span className="text-muted-foreground/30">•</span>
-                    <span>{bullet}</span>
+                    <span className="text-muted-foreground/30 shrink-0">•</span>
+                    <span dangerouslySetInnerHTML={{ __html: bullet }} />
                   </li>
                 ))}
               </ul>
             )}
-            
+
             {/* Tech Stack Tags */}
             <div className="flex flex-wrap gap-1.5">
               {project.tags.map((tag) => (
-                <span 
-                  key={tag} 
+                <span
+                  key={tag}
                   className="px-2 py-0.5 text-[10.5px] font-medium text-muted-foreground bg-muted/30 border border-border rounded-[4px] hover:bg-muted/50 transition-colors font-mono"
                 >
                   {tag}
