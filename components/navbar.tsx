@@ -6,7 +6,6 @@ import logo from "@/public/new_logo.png";
 import Link from "next/link";
 import SearchBar from "./search-bar";
 import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
-import { Music2 } from "lucide-react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub,faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import { motion, AnimatePresence } from "framer-motion";
@@ -57,6 +56,9 @@ export default function Navbar() {
           <Link className="font-mono text-[13px] text-muted-foreground hover:text-foreground transition-colors" href="/">
             Home
           </Link>
+          <Link className="font-mono text-[13px] text-muted-foreground hover:text-foreground transition-colors" href="/projects">
+            Projects
+          </Link>
           <SearchBar />
         </div>
 
@@ -75,9 +77,6 @@ export default function Navbar() {
             rel="noopener noreferrer"
             className="w-8 h-8 flex items-center justify-center group text-muted-foreground hover:text-foreground"><FontAwesomeIcon icon={faXTwitter} className="w-5 h-5 group-hover:scale-110 transition-all" /></a>
           <AnimatedThemeToggler className="w-8 h-8 text-muted-foreground hover:text-foreground transition-colors" duration={500} />
-          <button className="w-5 h-5 flex items-center justify-center transition-all group text-muted-foreground hover:text-foreground">
-            <Music2 className="w-5 h-5 group-hover:scale-110 transition-all" />
-          </button>
         </div>
       </div>
     </nav>

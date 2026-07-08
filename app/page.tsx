@@ -13,6 +13,7 @@ import Experience from "@/components/experience";
 import Education from "@/components/education";
 import Projects from "@/components/projects";
 // import Blogs from "@/components/blogs";
+import QuoteSection from "@/components/quote-section";
 import Footer from "@/components/footer";
 
 export default function Home() {
@@ -63,7 +64,7 @@ export default function Home() {
       <SlantSection />
 
       <div id="projects">
-        <SectionLabel label="Projects (03)" index="07" actionLabel="See All" actionHref="/projects" />
+        <SectionLabel label="Projects (09)" index="07" actionLabel="See All" actionHref="/projects" />
         <Projects />
       </div>
 
@@ -74,6 +75,7 @@ export default function Home() {
         <Blogs />
       </div> */}
 
+      <QuoteSection />
       <Footer />
       
     </div>
