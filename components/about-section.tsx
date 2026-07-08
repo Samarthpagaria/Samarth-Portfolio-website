@@ -48,24 +48,7 @@ export default function AboutSection() {
             </p>
           </li>
 
-          <li className="flex flex-col gap-0.5">
-            <div className="flex items-start gap-3">
-              <span className="shrink-0 text-muted-foreground/30 mt-0.5">•</span>
-              <p>
-                <strong className="text-foreground font-semibold">Full-Stack Developer at OCMONO Avenues (2025):</strong>
-              </p>
-            </div>
-            <ul className="pl-8 space-y-1">
-              <li className="flex items-start gap-3 text-muted-foreground/60 transition-colors">
-                <span className="shrink-0 text-muted-foreground/20 mt-0.5">◦</span>
-                <p>Delivered <span className="text-foreground">7+ professional websites</span> end-to-end, from Drupal backends to modern React frontends.</p>
-              </li>
-              <li className="flex items-start gap-3 text-muted-foreground/60 transition-colors">
-                <span className="shrink-0 text-muted-foreground/20 mt-0.5">◦</span>
-                <p>Later transitioned to the frontend team, contributing to the company&apos;s internal product with a focus on <span className="text-foreground">scalable, production-grade UI architecture</span>.</p>
-              </li>
-            </ul>
-          </li>
+                
         </ul>
       </div>
     </div>
