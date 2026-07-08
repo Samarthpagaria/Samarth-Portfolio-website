@@ -1,16 +1,19 @@
 "use client";
 import { motion } from "motion/react";
+import NextLink from "next/link";
 
 export default function SectionLabel({
   label,
   index,
   actionLabel,
   actionHref,
+  external = false,
 }: {
   label: string;
   index?: string;
   actionLabel?: string;
   actionHref?: string;
+  external?: boolean;
 }) {
   return (
     <div className="border-b border-border bg-background flex items-center h-8 px-4 relative overflow-hidden group tracking-wider transition-colors duration-300">
@@ -56,14 +59,23 @@ export default function SectionLabel({
 
       <div className="ml-auto flex items-center relative z-20">
         {actionLabel && actionHref ? (
-          <a
-            href={actionHref}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[10px] font-mono text-muted-foreground/50 hover:text-foreground transition-colors tracking-widest uppercase border border-border/50 hover:border-border rounded-[3px] px-2 py-0.5 hover:bg-muted/30"
-          >
-            {actionLabel}
-          </a>
+          external ? (
+            <a
+              href={actionHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[10px] font-mono text-muted-foreground/50 hover:text-foreground transition-colors tracking-widest uppercase border border-border/50 hover:border-border rounded-[3px] px-2 py-0.5 hover:bg-muted/30"
+            >
+              {actionLabel}
+            </a>
+          ) : (
+            <NextLink
+              href={actionHref}
+              className="text-[10px] font-mono text-muted-foreground/50 hover:text-foreground transition-colors tracking-widest uppercase border border-border/50 hover:border-border rounded-[3px] px-2 py-0.5 hover:bg-muted/30"
+            >
+              {actionLabel}
+            </NextLink>
+          )
         ) : (
           <>
             <div className="w-1 h-1 rounded-full bg-border" />

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { ExternalLink, ChevronsUpDown, Code2 } from "lucide-react";
+import { Link, ChevronsUpDown, Code2 } from "lucide-react";
 
 const projects = [
   {
@@ -96,7 +96,7 @@ function ProjectItem({ project }: { project: typeof projects[0] }) {
               rel="noopener noreferrer"
               className="hover:text-foreground transition-colors"
             >
-              <ExternalLink className="w-[18px] h-[18px] cursor-pointer" />
+              <Link className="w-[18px] h-[18px] cursor-pointer" />
             </a>
             <button
               onClick={() => setIsOpen(!isOpen)}

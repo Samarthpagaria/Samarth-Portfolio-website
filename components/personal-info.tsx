@@ -32,7 +32,7 @@ export default function PersonalInfo() {
                 <a
                   href="/resume.pdf"
                   download
-                  className="flex items-center gap-1.5 text-[10px] font-mono text-foreground font-semibold border border-foreground/40 px-2.5 py-1 rounded-full hover:bg-foreground hover:text-background transition-all duration-200 group shrink-0"
+                  className="flex items-center gap-1.5 text-[10px] font-mono text-foreground font-semibold border border-foreground/40 px-2.5 py-1 rounded-md hover:bg-foreground hover:text-background transition-all duration-200 group shrink-0"
                 >
                   <Download size={10} className="group-hover:translate-y-0.5 transition-transform duration-200" />
                   Resume

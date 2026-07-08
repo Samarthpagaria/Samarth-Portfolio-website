@@ -29,7 +29,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="sticky top-0 z-50 flex items-center justify-between py-1 px-6 bg-background border-b border-border transition-all duration-300">
+    <nav className="sticky top-0 z-50 flex items-center justify-between py-1 px-6 bg-background/20 backdrop-blur-sm border-b border-border transition-all duration-300">
       <div className="flex items-center gap-4">
         <AnimatePresence mode="wait">
           {showLogo && (

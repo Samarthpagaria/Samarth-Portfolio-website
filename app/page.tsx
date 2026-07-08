@@ -63,7 +63,7 @@ export default function Home() {
       <SlantSection />
 
       <div id="projects">
-        <SectionLabel label="Projects (03)" index="07" actionLabel="See All" actionHref="https://github.com/Samarthpagaria" />
+        <SectionLabel label="Projects (03)" index="07" actionLabel="See All" actionHref="/projects" />
         <Projects />
       </div>
 
