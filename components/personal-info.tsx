@@ -30,7 +30,7 @@ export default function PersonalInfo() {
               <div className="pl-2 pr-2 flex-1 border-b border-border flex items-center justify-between transition-colors">
                 <p className="font-sans text-foreground text-3xl font-extrabold">Samarth Pagaria</p>
                 <a
-                  href="/resume.pdf"
+                  href="/_Samarth%20Pagaria%20Resume%20(1).pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-1.5 text-[10px] font-mono text-foreground font-semibold border border-foreground/40 px-2.5 py-1 rounded-md hover:bg-foreground hover:text-background transition-all duration-200 group shrink-0"
