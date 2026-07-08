@@ -1,7 +1,7 @@
 import Image from "next/image";
 import profilePic from "@/public/image.png";
 import { WordRotate } from "@/components/ui/word-rotate";
-import { Download } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 
 export default function PersonalInfo() {
   return (
@@ -31,10 +31,11 @@ export default function PersonalInfo() {
                 <p className="font-sans text-foreground text-3xl font-extrabold">Samarth Pagaria</p>
                 <a
                   href="/resume.pdf"
-                  download
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center gap-1.5 text-[10px] font-mono text-foreground font-semibold border border-foreground/40 px-2.5 py-1 rounded-md hover:bg-foreground hover:text-background transition-all duration-200 group shrink-0"
                 >
-                  <Download size={10} className="group-hover:translate-y-0.5 transition-transform duration-200" />
+                  <ExternalLink size={10} className="group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform duration-200" />
                   Resume
                 </a>
               </div>
